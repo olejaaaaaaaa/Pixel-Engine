@@ -1,0 +1,20 @@
+{
+    "name": "Level-0",
+    "circle": {
+        "render":   "2D",
+        "pos":      [0.0, 0.3, 0.1],
+        "color":    [255, 235, 120],
+        "radius":   0.2
+    },
+
+    "cube": {
+        "render":           "3D",
+        "transform":        [0.5, 0.1, 0.2],
+        "pos":              [0.0, 0.1, 0.2],
+        "width":            "0.24",
+        "height":           "0.12",
+        "texture":          "src/assets/textures/cube.png",
+        "physic_enabled":   true,
+        "layer":            1
+    }
+}

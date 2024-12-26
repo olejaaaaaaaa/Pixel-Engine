@@ -1,0 +1,6 @@
+{
+    "fullscrean":   true,
+    "mssa":         true,
+    "optimization": "Low",
+    "v-sync":       true
+}
