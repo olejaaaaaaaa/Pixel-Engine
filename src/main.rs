@@ -25,7 +25,7 @@ use winit::{
 
 
 extern crate pixel_init_render;
-use pixel_init_render::PixelEngine;
+use pixel_init_render::{debug_draw, PixelEngine};
 
 use tokio::*;
 
@@ -33,9 +33,11 @@ use tokio::*;
 async fn main() -> Result<(), Box<dyn Error>> {
     
     unsafe { 
-        std::env::set_var("RUST_LOG", "lolypop=Debug");
-        env_logger::init();
+        std::env::set_var("RUST_LOG", "Debug");
+        std::env::set_var("RUST_BACKTRACE", "1");
     };
+
+    env_logger::init();
 
     // debug_udp_client();
     // debug_sound_play();
@@ -58,6 +60,7 @@ async fn main() -> Result<(), Box<dyn Error>> {
 
     let mut engine = unsafe { PixelEngine::new(&window) };
 
+    
     let mut time_begin = Instant::now();
     event_loop.run(move |event, elwp| { 
         
